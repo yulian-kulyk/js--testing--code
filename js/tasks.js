@@ -14,3 +14,20 @@ for (let i = 0; i < arr.length; i++) {
     result += arr[i];
 }
 console.log(result);
+
+
+//умовa нерівності трикутників
+function isTriangle(a,b,c)
+{
+  
+  if(a + b > c) {
+    if(a + c > b) {
+        if(b+ c > a) {
+            return true;
+        }
+    }
+  }
+  return false;
+}
+
+console.log(isTriangle(1,2,2));
