@@ -31,3 +31,15 @@ function isTriangle(a,b,c)
 }
 
 console.log(isTriangle(1,2,2));
+
+
+//kata
+function grow(x){    
+    let suma;
+        for(let i = 0; i < x.length; i++) {
+            suma *= x[i];
+        }
+        return suma;
+    }
+    
+    console.log(grow([1, 2, 3]));
