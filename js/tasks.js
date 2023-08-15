@@ -43,3 +43,17 @@ function grow(x){
     }
     
     console.log(grow([1, 2, 3]));
+
+    console.log(oddOrEven([0, 1, 5]));
+
+function oddOrEven(array) {
+    let suma = 0;    
+    for (let i = 0; i < array.length; i++) {
+        suma += array[i];
+    }
+    if (suma % 2) {
+        return "odd";
+    } else {
+        return "even";
+    }
+}
