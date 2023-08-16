@@ -57,3 +57,35 @@ function oddOrEven(array) {
         return "even";
     }
 }
+
+
+//A = T; T = A; G = C; C = G;
+
+let arr = [];
+let data = "AAAAAAAA";
+
+for (let i = 0; i < data.length; i++) {
+    arr.push(data[i]);
+}
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'A') {
+        arr[i] = "T";
+    }
+    else if (arr[i] === 'T') {
+        arr[i] = "A";
+    }
+    if (arr[i] === 'C') {
+        arr[i] = "G";
+    }
+    else if (arr[i] === 'G') {
+        arr[i] = "C";
+    } 
+}
+
+let result = "";
+
+for (let i = 0; i < arr.length; i++) {
+    result += arr[i];
+}
+console.log(result);
