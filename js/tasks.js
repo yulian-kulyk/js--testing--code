@@ -1,3 +1,4 @@
+/*
 // сума всіх цілих чисел
 const a = -3;
 const b = 5;
@@ -89,3 +90,49 @@ for (let i = 0; i < arr.length; i++) {
     result += arr[i];
 }
 console.log(result);
+
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+function sumTwoSmallestNumbers(numbers) {  
+numbers.sort(function (a, b) {
+  return a - b;
+});
+return numbers[0] + numbers[1];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
