@@ -101,6 +101,22 @@ return numbers[0] + numbers[1];
 }
 
 
+function accum(s) {
+    s = s.toLowerCase();
+    let result = "";
+    for (let i = 0; i < s.length; i++) {
+        result += s[i].toUpperCase();
+        result += s[i].repeat(i);
+        result += "-";
+    }
+    result = result.slice(0, -1);
+    return result;
+}
+
+console.log(accum("abcd"));    // Output: "A-Bb-Ccc-Dddd"
+console.log(accum("RqaEzty")); // Output: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+console.log(accum("cwAt"));    // Output: "C-Ww-Aaa-Tttt"
+
 
 
 
