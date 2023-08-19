@@ -117,6 +117,20 @@ console.log(accum("abcd"));    // Output: "A-Bb-Ccc-Dddd"
 console.log(accum("RqaEzty")); // Output: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 console.log(accum("cwAt"));    // Output: "C-Ww-Aaa-Tttt"
 
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+//Щоб бути старшим, член повинен бути не менше 55 років і мати гандикап більше 7. 
+//У цьому крокетному клубі гандикап коливається від -2 до +26
+
+function openOrSenior(data) {
+    const result = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i][0] >= 55 && data[i][1] >= 7) {
+            result.push("Senior");
+        } else {result.push("Open");}
+
+    }
+    return result;
+}
 
 
 
