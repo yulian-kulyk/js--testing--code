@@ -131,7 +131,16 @@ function openOrSenior(data) {
     }
     return result;
 }
-
+console.log(paperwork(5,5));
+console.log(-5 * -5);
+//n = classmates m - pages
+function paperwork(n, m) {
+    if (n > 0 && m > 0) {
+        return n*m;
+    } 
+    return 0;
+  }
+  
 
 
 
