@@ -160,8 +160,23 @@ function number (busStops) {
 
 
 
+//kata 5lvl
 
 
+console.log(domainName("http://google.com"));
+console.log(domainName("http://google.co.jp"));
+console.log(domainName("www.xakep.ru"));
+console.log(domainName("https://youtube.com"));
+function domainName(url){
+    let webSite = url;
+
+    webSite = webSite.replace("http://", "");
+    webSite = webSite.replace("https://", "");
+    webSite = webSite.replace("www.", "");
+    webSite = webSite.slice(0, webSite.indexOf('.'));
+
+    return webSite;
+  }
 
 
 
