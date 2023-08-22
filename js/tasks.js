@@ -178,7 +178,7 @@ function domainName(url){
     return webSite;
   }
 
-
+Math.floor(5.95);
 
 
 
