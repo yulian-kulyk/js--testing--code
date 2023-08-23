@@ -1,3 +1,4 @@
+/*
 // сума всіх цілих чисел
 const a = -3;
 const b = 5;
@@ -43,3 +44,177 @@ function grow(x){
     }
     
     console.log(grow([1, 2, 3]));
+
+    console.log(oddOrEven([0, 1, 5]));
+
+function oddOrEven(array) {
+    let suma = 0;    
+    for (let i = 0; i < array.length; i++) {
+        suma += array[i];
+    }
+    if (suma % 2) {
+        return "odd";
+    } else {
+        return "even";
+    }
+}
+
+
+//A = T; T = A; G = C; C = G;
+
+let arr = [];
+let data = "AAAAAAAA";
+
+for (let i = 0; i < data.length; i++) {
+    arr.push(data[i]);
+}
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'A') {
+        arr[i] = "T";
+    }
+    else if (arr[i] === 'T') {
+        arr[i] = "A";
+    }
+    if (arr[i] === 'C') {
+        arr[i] = "G";
+    }
+    else if (arr[i] === 'G') {
+        arr[i] = "C";
+    } 
+}
+
+let result = "";
+
+for (let i = 0; i < arr.length; i++) {
+    result += arr[i];
+}
+console.log(result);
+
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+function sumTwoSmallestNumbers(numbers) {  
+numbers.sort(function (a, b) {
+  return a - b;
+});
+return numbers[0] + numbers[1];
+}
+
+
+function accum(s) {
+    s = s.toLowerCase();
+    let result = "";
+    for (let i = 0; i < s.length; i++) {
+        result += s[i].toUpperCase();
+        result += s[i].repeat(i);
+        result += "-";
+    }
+    result = result.slice(0, -1);
+    return result;
+}
+
+console.log(accum("abcd"));    // Output: "A-Bb-Ccc-Dddd"
+console.log(accum("RqaEzty")); // Output: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+console.log(accum("cwAt"));    // Output: "C-Ww-Aaa-Tttt"
+
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+//Щоб бути старшим, член повинен бути не менше 55 років і мати гандикап більше 7. 
+//У цьому крокетному клубі гандикап коливається від -2 до +26
+
+function openOrSenior(data) {
+    const result = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i][0] >= 55 && data[i][1] >= 7) {
+            result.push("Senior");
+        } else {result.push("Open");}
+
+    }
+    return result;
+}
+console.log(paperwork(5,5));
+console.log(-5 * -5);
+//n = classmates m - pages
+function paperwork(n, m) {
+    if (n > 0 && m > 0) {
+        return n*m;
+    } 
+    return 0;
+  }
+  
+
+console.log(number([[10,0],[3,5],[5,8]]));
+
+
+function number (busStops) {
+    let result = 0;
+    for (let i = 0; i < busStops.length; i++) {
+        result += busStops[i][0];
+        result -= busStops[i][1];
+    }
+    return result;
+}
+//kata
+
+
+
+
+
+
+//kata 5lvl
+
+
+console.log(domainName("http://google.com"));
+console.log(domainName("http://google.co.jp"));
+console.log(domainName("www.xakep.ru"));
+console.log(domainName("https://youtube.com"));
+function domainName(url){
+    let webSite = url;
+
+    webSite = webSite.replace("http://", "");
+    webSite = webSite.replace("https://", "");
+    webSite = webSite.replace("www.", "");
+    webSite = webSite.slice(0, webSite.indexOf('.'));
+
+    return webSite;
+  }
+
+Math.floor(5.95);
+
+//console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("aba"));
+
+function isIsogram(str) {
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
