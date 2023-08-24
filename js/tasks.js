@@ -211,7 +211,24 @@ function fakeBin(x){
     return result;
 }
 
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
 
+function findShort(s){
+    let arr = [];
+    
+    arr = s.split(" ");
+    arr.sort(function(min,max) {
+        return min.length - max.length;
+    });
+    return arr[0];
+
+    
+    
+  }
+
+
+
+  
 
 
 
