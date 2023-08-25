@@ -1,188 +1,119 @@
 /*
-// сума всіх цілих чисел
 const a = -3;
 const b = 5;
 let arr = [];
 let result = 0;
 
 for (let i = a; i <= b; i++) {
-    arr.push(i);
+  arr.push(i);
 }
-console.log(arr);
 
-//result = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] + arr[7] + arr[8];
 for (let i = 0; i < arr.length; i++) {
-    result += arr[i];
+  result += arr[i];
 }
-console.log(result);
 
-
-//умовa нерівності трикутників
-function isTriangle(a,b,c)
-{
-  
-  if(a + b > c) {
-    if(a + c > b) {
-        if(b+ c > a) {
-            return true;
-        }
+function isTriangle(a, b, c) {
+  if (a + b > c) {
+    if (a + c > b) {
+      if (b + c > a) {
+        return true;
+      }
     }
   }
   return false;
 }
-
-console.log(isTriangle(1,2,2));
-
-
-//kata
-function grow(x){    
-    let suma;
-        for(let i = 0; i < x.length; i++) {
-            suma *= x[i];
-        }
-        return suma;
-    }
-    
-    console.log(grow([1, 2, 3]));
-
-    console.log(oddOrEven([0, 1, 5]));
-
-function oddOrEven(array) {
-    let suma = 0;    
-    for (let i = 0; i < array.length; i++) {
-        suma += array[i];
-    }
-    if (suma % 2) {
-        return "odd";
-    } else {
-        return "even";
-    }
+function grow(x) {
+  let suma;
+  for (let i = 0; i < x.length; i++) {
+    suma *= x[i];
+  }
+  return suma;
 }
-
-
-//A = T; T = A; G = C; C = G;
-
+function oddOrEven(array) {
+  let suma = 0;
+  for (let i = 0; i < array.length; i++) {
+    suma += array[i];
+  }
+  if (suma % 2) {
+    return "odd";
+  } else {
+    return "even";
+  }
+}
 let arr = [];
 let data = "AAAAAAAA";
 
 for (let i = 0; i < data.length; i++) {
-    arr.push(data[i]);
+  arr.push(data[i]);
 }
-
 for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 'A') {
-        arr[i] = "T";
-    }
-    else if (arr[i] === 'T') {
-        arr[i] = "A";
-    }
-    if (arr[i] === 'C') {
-        arr[i] = "G";
-    }
-    else if (arr[i] === 'G') {
-        arr[i] = "C";
-    } 
+  if (arr[i] === "A") {
+    arr[i] = "T";
+  } else if (arr[i] === "T") {
+    arr[i] = "A";
+  }
+  if (arr[i] === "C") {
+    arr[i] = "G";
+  } else if (arr[i] === "G") {
+    arr[i] = "C";
+  }
 }
-
 let result = "";
-
 for (let i = 0; i < arr.length; i++) {
-    result += arr[i];
+  result += arr[i];
 }
-console.log(result);
-
-console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
-
-function sumTwoSmallestNumbers(numbers) {  
-numbers.sort(function (a, b) {
-  return a - b;
-});
-return numbers[0] + numbers[1];
+function sumTwoSmallestNumbers(numbers) {
+  numbers.sort(function (a, b) {
+    return a - b;
+  });
+  return numbers[0] + numbers[1];
 }
-
-
 function accum(s) {
-    s = s.toLowerCase();
-    let result = "";
-    for (let i = 0; i < s.length; i++) {
-        result += s[i].toUpperCase();
-        result += s[i].repeat(i);
-        result += "-";
-    }
-    result = result.slice(0, -1);
-    return result;
+  s = s.toLowerCase();
+  let result = "";
+  for (let i = 0; i < s.length; i++) {
+    result += s[i].toUpperCase();
+    result += s[i].repeat(i);
+    result += "-";
+  }
+  result = result.slice(0, -1);
+  return result;
 }
-
-console.log(accum("abcd"));    // Output: "A-Bb-Ccc-Dddd"
-console.log(accum("RqaEzty")); // Output: "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-console.log(accum("cwAt"));    // Output: "C-Ww-Aaa-Tttt"
-
-console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
-//Щоб бути старшим, член повинен бути не менше 55 років і мати гандикап більше 7. 
-//У цьому крокетному клубі гандикап коливається від -2 до +26
-
 function openOrSenior(data) {
-    const result = [];
-    for (let i = 0; i < data.length; i++) {
-        if (data[i][0] >= 55 && data[i][1] >= 7) {
-            result.push("Senior");
-        } else {result.push("Open");}
-
+  const result = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] >= 7) {
+      result.push("Senior");
+    } else {
+      result.push("Open");
     }
-    return result;
+  }
+  return result;
 }
-console.log(paperwork(5,5));
-console.log(-5 * -5);
-//n = classmates m - pages
 function paperwork(n, m) {
-    if (n > 0 && m > 0) {
-        return n*m;
-    } 
-    return 0;
+  if (n > 0 && m > 0) {
+    return n * m;
   }
-  
-
-console.log(number([[10,0],[3,5],[5,8]]));
-
-
-function number (busStops) {
-    let result = 0;
-    for (let i = 0; i < busStops.length; i++) {
-        result += busStops[i][0];
-        result -= busStops[i][1];
-    }
-    return result;
+  return 0;
 }
-//kata
-
-
-
-
-
-
-//kata 5lvl
-
-
-console.log(domainName("http://google.com"));
-console.log(domainName("http://google.co.jp"));
-console.log(domainName("www.xakep.ru"));
-console.log(domainName("https://youtube.com"));
-function domainName(url){
-    let webSite = url;
-
-    webSite = webSite.replace("http://", "");
-    webSite = webSite.replace("https://", "");
-    webSite = webSite.replace("www.", "");
-    webSite = webSite.slice(0, webSite.indexOf('.'));
-
-    return webSite;
+function number(busStops) {
+  let result = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    result += busStops[i][0];
+    result -= busStops[i][1];
   }
+  return result;
+}
+function domainName(url) {
+  let webSite = url;
 
-Math.floor(5.95);
+  webSite = webSite.replace("http://", "");
+  webSite = webSite.replace("https://", "");
+  webSite = webSite.replace("www.", "");
+  webSite = webSite.slice(0, webSite.indexOf("."));
 
-//console.log(isIsogram("Dermatoglyphics"));
-console.log(isIsogram("aba"));
-
+  return webSite;
+}
 function isIsogram(str) {
   str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
@@ -194,81 +125,119 @@ function isIsogram(str) {
   }
   return true;
 }
-
-console.log(fakeBin('45385593107843568'));
-// '01011110001100111' 
-
-function fakeBin(x){
-    let result = "";
-    for (let i =0; i < x.length; i++) {
-        if(x[i] < 5) {
-            result += "0";        
-        }
-        else {
-            result += "1";
-        }
+function fakeBin(x) {
+  let result = "";
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] < 5) {
+      result += "0";
+    } else {
+      result += "1";
     }
-    return result;
-}
-
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
-
-function findShort(s){
-    let arr = [];
-    
-    arr = s.split(" ");
-    arr.sort(function(min,max) {
-        return min.length - max.length;
-    });
-    return arr[0];
-
-    
-    
   }
-
-
-
-  function alphabetPosition(text){
-    let result = "";
-    const letter = text.toLowerCase();
-    const alphabet = {
-        a: 1,
-        b: 2,
-        c: 3,
-        d: 4,
-        e: 5,
-        f: 6,
-        g: 7,
-        h: 8,
-        i: 9,
-        j: 10,
-        k: 11,
-        l: 12,
-        m: 13,
-        n: 14,
-        o: 15,
-        p: 16,
-        q: 17,
-        r: 18,
-        s: 19,
-        t: 20,
-        u: 21,
-        v: 22,
-        w: 23,
-        x: 24,
-        y: 25,
-        z: 26,
-    };
-    for(let i = 0; i < letter.length; i++) {
-        if(letter[i] === " ") {
-            result += "";
-        } else if (alphabet.hasOwnProperty(letter[i])) {
-            result += alphabet[letter[i]];
-            result += " ";
-        }
-    }
-    return result.trim();
+  return result;
 }
+function findShort(s) {
+  let arr = [];
+
+  arr = s.split(" ");
+  arr.sort(function (min, max) {
+    return min.length - max.length;
+  });
+  return arr[0];
+}
+function alphabetPosition(text) {
+  let result = "";
+  const letter = text.toLowerCase();
+  const alphabet = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    f: 6,
+    g: 7,
+    h: 8,
+    i: 9,
+    j: 10,
+    k: 11,
+    l: 12,
+    m: 13,
+    n: 14,
+    o: 15,
+    p: 16,
+    q: 17,
+    r: 18,
+    s: 19,
+    t: 20,
+    u: 21,
+    v: 22,
+    w: 23,
+    x: 24,
+    y: 25,
+    z: 26,
+  };
+  for (let i = 0; i < letter.length; i++) {
+    if (letter[i] === " ") {
+      result += "";
+    } else if (alphabet.hasOwnProperty(letter[i])) {
+      result += alphabet[letter[i]];
+      result += " ";
+    }
+  }
+  return result.trim();
+}
+function highAndLow(numbers) {
+  let arr = numbers.split(" ");
+  const minNumber = Math.min(...arr);
+  const maxNumber = Math.max(...arr);
+  const result = maxNumber.toString() + " " + minNumber.toString();
+  return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
