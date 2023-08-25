@@ -193,7 +193,12 @@ function highAndLow(numbers) {
   const result = maxNumber.toString() + " " + minNumber.toString();
   return result;
 }
-
+function noSpace(x){
+  return x.split(" ").join("");
+}
+function rowSumOddNumbers(n) {
+    return n*n*n;
+}
 
 
 
