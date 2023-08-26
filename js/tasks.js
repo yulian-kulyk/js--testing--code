@@ -199,12 +199,23 @@ function noSpace(x){
 function rowSumOddNumbers(n) {
     return n*n*n;
 }
-
-
-
 function abbrevName(name){
   let arr = name.split(" ");
   let result = arr[0][0]+ "." + arr[1][0] + ".";
+  return result;
+}
+function duplicateCount(text) {
+  let result = 0;
+  let arr = text.toLowerCase().split("").sort();
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      result++;
+      while (arr[i] === arr[i + 1]) {
+        i++;
+      }
+    }
+  }
   return result;
 }
 
