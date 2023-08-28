@@ -221,7 +221,24 @@ function duplicateCount(text) {
 function digitize(n) {
     return n.toString().split("").reverse().map((i) => parseInt(i));
   }
-
+function persistence(num) {
+    if (num < 10) {
+      return 0;
+    }
+    let count = 0;
+    while (num >= 10) {
+      let str = num.toString();
+      let ind = 1;
+      for (let i = 0; i < str.length; i++) {
+        ind *= parseInt(str[i]);
+      }
+      
+      num = ind;
+      count++;
+    }
+    
+    return count;
+  }
 
 
 
