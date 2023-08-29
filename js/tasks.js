@@ -239,7 +239,9 @@ function persistence(num) {
     
     return count;
   }
-
+function greet(str) {
+  return "hello world!";
+}
 
 
 
