@@ -248,7 +248,20 @@ function getMiddle(s)
   return s.slice((s.length-1)/2, s.length/2+1);
 }
 
-
+function deleteNth(arr, n) {
+  let result = [];
+  let count = [];
+  for (let num of arr) {
+    if (!count[num]) {
+      count[num] = 1;
+      result.push(num);
+    } else if (count[num] < n) {
+      count[num]++;
+      result.push(num);
+    }
+  }
+  return result;
+}
 
 
 
