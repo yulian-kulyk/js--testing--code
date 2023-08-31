@@ -262,7 +262,15 @@ function deleteNth(arr, n) {
   }
   return result;
 }
-
+function sumArray(array) {
+if (array === null || !Array.isArray(array) || array.length <= 1) {
+        return 0;
+    }
+    const sortedArray = [...array].sort((a, b) => a - b);
+    const slicedArray = sortedArray.slice(1, -1);
+    const res = slicedArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    return res;
+}
 
 
 
