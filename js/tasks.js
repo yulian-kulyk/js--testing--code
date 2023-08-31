@@ -272,7 +272,9 @@ if (array === null || !Array.isArray(array) || array.length <= 1) {
     return res;
 }
 
-
+function minMax(arr){
+  return [Math.min(...arr),Math.max(...arr)]; // fix me!
+}
 
 
 
