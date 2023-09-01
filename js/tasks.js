@@ -276,6 +276,10 @@ function minMax(arr){
   return [Math.min(...arr),Math.max(...arr)]; // fix me!
 }
 
+function binaryArrayToNumber(arr) {
+  const replace = arr.reduce((acc, val) => acc + val, "");
+  return parseInt(replace, 2);
+}
 
 
 
