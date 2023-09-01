@@ -280,7 +280,9 @@ function binaryArrayToNumber(arr) {
   const replace = arr.reduce((acc, val) => acc + val, "");
   return parseInt(replace, 2);
 }
-
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
 
 
 
