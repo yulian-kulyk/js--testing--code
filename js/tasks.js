@@ -284,7 +284,10 @@ function repeatStr (n, s) {
   return s.repeat(n);
 }
 
-
+function sumMix(x){
+  let result = 0;
+  return x.map(Number).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
 
 
 
