@@ -289,7 +289,20 @@ function sumMix(x){
   return x.map(Number).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
+function likes(names) {
+    if (names === null || !Array.isArray(names) || names.length < 1) {
+        return 'no one likes this';
+    } else if (names.length === 1) {
+        return names[0] +" likes this";  
+    } else if (names.length === 2) {
+        return names[0] + " and " +names[1]+" like this";
+    } else if(names.length === 3) {
+        return names[0] + ", " +names[1] +" and " +names[2] +" like this";
+    } else if (names.length >= 4) {
+        return names[0]+", " + names[1] + " and " +(names.length -2) + " others like this"
+    }
 
+  }
 
 
 
