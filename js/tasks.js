@@ -311,6 +311,20 @@ if ((bullets / 2) >= dragons) {
   return false;
 }
 
+function expandedForm(num) {
+    const numString = num.toString();
+    const expandedDigits = [];
+    
+    for (let i = 0; i < numString.length; i++) {
+      const index = parseInt(numString[i]);
+      
+      if (index !== 0) {
+        const value = index * Math.pow(10, numString.length - i - 1);
+        expandedDigits.push(value.toString());
+      }
+    }
+    return expandedDigits.join(' + ');
+  }
 
 
 
