@@ -332,7 +332,9 @@ function feast(beast, dish) {
     }
     return false;
 }
-
+function smash (words) {
+   return words.join(' ')
+};
 
 
 
