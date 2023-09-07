@@ -372,7 +372,9 @@ function basicOp(operation, value1, value2)
 function checkForFactor (base, factor) {
   return (base % factor) ? false : true;
 }
-
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return ((fuelLeft * mpg) >= distanceToPump) ? true : false;
+};
 
 
 
