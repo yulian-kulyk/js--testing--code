@@ -369,7 +369,9 @@ function basicOp(operation, value1, value2)
       break;
   }
 }
-
+function checkForFactor (base, factor) {
+  return (base % factor) ? false : true;
+}
 
 
 
