@@ -377,6 +377,19 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 };
 
 
+function wave(str) {
+    const strLength = str.length;
+    const result = [];
+
+    for (let i = 0; i < strLength; i++) {
+        if(str[i] !==' ') {
+            const waveStr = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+            result.push(waveStr);
+        }
+        }
+
+    return result;
+}
 
 
 
