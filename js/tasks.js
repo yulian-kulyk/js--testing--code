@@ -402,7 +402,9 @@ function points(games) {
     }
     return sum;
   }
-
+function disemvowel(str) {
+  return str.replace(/[aeiouAEIOU]/g, '');
+}
 
 
 
