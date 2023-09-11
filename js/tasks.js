@@ -405,7 +405,9 @@ function points(games) {
 function disemvowel(str) {
   return str.replace(/[aeiouAEIOU]/g, '');
 }
-
+function testEven(n) {
+   return (n % 2 === 0) ? true : false;
+}
 
 
 
